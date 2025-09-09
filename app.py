@@ -11,7 +11,7 @@ cwd = os.getcwd()
 config_data = []
 
 # Read Config Json File
-with open("config.json", "r") as config_file:
+with open(cwd + "/config.json", "r") as config_file:
     config_data = json.load(config_file)
 
     # Credentials
