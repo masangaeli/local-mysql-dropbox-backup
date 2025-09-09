@@ -4,14 +4,14 @@ import dropbox
 from dropbox.files import WriteMode
 from dropbox.exceptions import ApiError, AuthError
 
-# Get Current Working Directory
-cwd = os.getcwd()
+# Detect script's folder
+cwd = os.path.dirname(os.path.abspath(__file__))
 
 # Config Data
 config_data = []
 
 # Read Config Json File
-with open(cwd + "/config.json", "r") as config_file:
+with open(os.path.join(cwd, "config.json"), "r") as config_file:
     config_data = json.load(config_file)
 
     # Credentials
