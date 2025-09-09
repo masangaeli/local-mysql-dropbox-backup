@@ -45,6 +45,9 @@ def backup_db():
         print("Uploading " + LOCALFILE + " to Dropbox as " + BACKUPPATH + "...")
         try:
             dbx.files_upload(f.read(), BACKUPPATH, mode=WriteMode('overwrite'))
+
+            # Delete Local Db File
+            os.system("rm -rf " + backup_path)
         except ApiError as err:
             # This checks for the specific error where a user doesn't have
             # enough Dropbox space quota to upload this file
