@@ -1,0 +1,17 @@
+{
+ 
+    "db_name": "sample_db",
+
+    "db_user": "root",
+
+    "db_pass": "",
+
+    "db_port": "3306",
+
+    "db_host": "127.0.0.1",
+
+    "db_backup_name": "sample_db",
+
+    "drp_token": ""
+    
+}
