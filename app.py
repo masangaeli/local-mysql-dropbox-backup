@@ -25,7 +25,7 @@ with open("config.json", "r") as config_file:
 
 # Take Database Backup
 backup_path = os.path.join(cwd, db_backup_name + ".sql")
-os.system("mysqldump -u " + db_user + " -p" + db_pass + " " + db_name + " > " + db_backup_name)
+os.system("mysqldump -u " + db_user + " -p" + db_pass + " " + db_name + " > " + backup_path)
 
 # Add OAuth2 access token here.
 # You can generate one for yourself in the App Console.
